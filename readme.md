@@ -1,7 +1,7 @@
 Philwinkle_DeadlockRetry
 ========================
 
-Retries upon detected deadlock. Provides configuration panel support for enabling module and setting various options like # of retries and how long to space the retries out (using Exponential Backoff strategy).
+Retries upon detected deadlock. Provides configuration panel support for enabling module and setting various options like # of retries and how long to space the retries out (using [Exponential Backoff strategy][http://en.wikipedia.org/wiki/Exponential_backoff]).
 
 Configuration panel options are located in System > Configuration > System.
 
@@ -14,7 +14,7 @@ This module is in early alpha. Do not use with 1.8CE/1.13EE or later.
 
 I am not claiming this will fix anything or improve the performance of your store. Use at your own risk.
 
-This is not intended to be a long-term solution to stores with systemic issues. This is meant to help solve real-world problems with stores suffering from deadlocks while they work out their own hardware, plugin, customization, other issues.
+This is not intended to be a long-term solution for stores with systemic issues. This is meant to help solve real-world problems with stores suffering from deadlocks while they work out their own hardware, plugin, customization, other issues.
 
 
 
