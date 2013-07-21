@@ -4,9 +4,6 @@
 		<Philwinkle_DeadlockRetry>
             <active>true</active>
             <codePool>local</codePool>
-            <depends>
-            	<Mage_Core />
-            </depends>
 		</Philwinkle_DeadlockRetry>
 		<Mage_Core>
 			<depends>
