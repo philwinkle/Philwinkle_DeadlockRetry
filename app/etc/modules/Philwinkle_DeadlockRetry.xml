@@ -13,6 +13,5 @@
 				<Philwinkle_DeadlockRetry />
 			</depends>
 		</Mage_Core>
-		<Mage_Core>
 	</modules>
 </config>
