@@ -5,16 +5,27 @@
             <version>0.1.0</version>
         </Philwinkle_DeadlockRetry>
     </modules>
-    <global></global>
+    <global>
+        <events>
+            <controller_front_init_before>
+                <observers>
+                    <philwinkle_deadlockretry>
+                        <class>Philwinkle_DeadlockRetry_Model_Observer</class>
+                        <method>setup</method>
+                    </philwinkle_deadlockretry>
+                </observers>
+            </controller_front_init_before>
+        </events>
+    </global>
     <frontend></frontend>
-    <defaults>
-        <admin>
+    <default>
+        <system>
             <deadlock>
                 <enable>0</enable>
                 <serializable>0</serializable>
                 <retrycount>10</retrycount>
                 <delaypower>2</delaypower>
             </deadlock>
-        </admin>
-    </defaults>
+        </system>
+    </default>
 </config>

@@ -1,29 +1,16 @@
 <?xml version="1.0"?>
 <config>
-    <tabs>
-        <deadlockretry translate="label" module="deadlockretry">
-            <label>Deadlock Retry</label>
-            <sort_order>99999</sort_order>
-        </deadlockretry>
-    </tabs> 
     <sections>
-        <admin>
-            <label>Retry Options</label>
-            <tab>extendsystemconfig</tab>
-            <frontend_type>text</frontend_type>
-            <sort_order>1000</sort_order>
-            <show_in_default>1</show_in_default>
-            <show_in_website>1</show_in_website>
-            <show_in_store>1</show_in_store>   
+        <system>
             <groups>
                 <deadlock translate="label">
-                    <label>Variable Setup</label>
+                    <label>Deadlock Retry Setup</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>1</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>                
-					<fields>
+                    <fields>
                         <enable translate="label">
                             <label>Enabled</label>
                             <frontend_type>select</frontend_type>
@@ -44,7 +31,8 @@
                         </serializable>
                         <retrycount translate="label comment">
                             <label>Enabled</label>
-                            <frontend_type>Number of Retries after Deadlock</frontend_type>
+                            <frontend_type>text</frontend_type>
+                            <comment>Number of Retries after Deadlock</comment>
                             <sort_order>30</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -59,9 +47,9 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </delaypower>
-					</fields>  					
-                </deadlock>	
-            </groups>			
-        </admin>
-    </sections>  	
+                    </fields>                   
+                </deadlock> 
+            </groups>           
+        </system>
+    </sections>     
 </config>

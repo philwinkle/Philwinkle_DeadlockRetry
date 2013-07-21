@@ -5,10 +5,5 @@
             <active>true</active>
             <codePool>local</codePool>
 		</Philwinkle_DeadlockRetry>
-		<Mage_Core>
-			<depends>
-				<Philwinkle_DeadlockRetry />
-			</depends>
-		</Mage_Core>
 	</modules>
 </config>

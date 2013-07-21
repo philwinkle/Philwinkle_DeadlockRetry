@@ -227,16 +227,15 @@ class Zend_Db_Statement_Pdo extends Zend_Db_Statement implements IteratorAggrega
      */
     public function _execute(array $params = null)
     {
+        if(Mage::registry('system/deadlock/enable')):
 
-        if(Mage::getStoreConfig('admin/deadlock/enable')):
-
-            if(Mage::getStoreConfig('admin/deadlock/serializable')){
+            if(Mage::registry('system/deadlock/serializable')){
                 $this->_adapter->query('SET TRANSACTION ISOLATION LEVEL SERIALIZABLE');
             }
 
             //begin a retry loop that will recycle should a deadlock pop up
             $tries = 0;
-            $maxTries = Mage::getStoreConfig('admin/deadlock/retrycount');
+            $maxTries = Mage::registry('system/deadlock/retrycount');
             do {
                 $retry = false;
                 try {
@@ -280,7 +279,7 @@ class Zend_Db_Statement_Pdo extends Zend_Db_Statement implements IteratorAggrega
      * @return int  the number of tries raised to the second power. e.g. 5th try, 25 second delay
      */
     public static function getDelay($tries){
-        $power = Mage::getStoreConfig('admin/deadlock/delaypower');
+        $power = Mage::registry('system/deadlock/delaypower');
         return (int) pow($power, $tries);
     }
 
