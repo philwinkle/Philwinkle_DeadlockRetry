@@ -1,7 +1,7 @@
 Philwinkle_DeadlockRetry
 ========================
 
-Retries upon detected deadlock. Provides configuration panel support for enabling module and setting various options like # of retries and how long to space the retries out (using [Exponential Backoff strategy][http://en.wikipedia.org/wiki/Exponential_backoff]).
+Retries upon detected deadlock. Provides configuration panel support for enabling module and setting various options like # of retries and how long to space the retries out (using <a href="http://en.wikipedia.org/wiki/Exponential_backoff">Exponential Backoff strategy</a>).
 
 Configuration panel options are located in System > Configuration > System.
 
