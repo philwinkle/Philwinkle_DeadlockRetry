@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Philwinkle_DeadlockRetry>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+            	<Mage_Core />
+            </depends>
+		</Philwinkle_DeadlockRetry>
+		<Mage_Core>
+			<depends>
+				<Philwinkle_DeadlockRetry />
+			</depends>
+		</Mage_Core>
+		<Mage_Core>
+	</modules>
+</config>

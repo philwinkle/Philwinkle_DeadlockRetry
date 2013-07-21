@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Philwinkle_DeadlockRetry>
+            <version>0.1.0</version>
+        </Philwinkle_DeadlockRetry>
+    </modules>
+    <global></global>
+    <frontend></frontend>
+    <defaults>
+        <admin>
+            <deadlock>
+                <enable>0</enable>
+                <serializable>0</serializable>
+                <retrycount>10</retrycount>
+                <delaypower>2</delaypower>
+            </deadlock>
+        </admin>
+    </defaults>
+</config>
