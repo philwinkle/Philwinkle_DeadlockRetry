@@ -230,7 +230,7 @@ class Zend_Db_Statement_Pdo extends Zend_Db_Statement implements IteratorAggrega
         if(Mage::registry('system/deadlock/enable')):
 
             if(Mage::registry('system/deadlock/serializable')){
-                $this->_adapter->query('SET TRANSACTION ISOLATION LEVEL SERIALIZABLE');
+                // $this->_adapter->query('SET TRANSACTION ISOLATION LEVEL SERIALIZABLE');
             }
 
             //begin a retry loop that will recycle should a deadlock pop up

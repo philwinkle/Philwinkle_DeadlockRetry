@@ -30,7 +30,7 @@
                             <show_in_store>1</show_in_store>
                         </serializable>
                         <retrycount translate="label comment">
-                            <label>Enabled</label>
+                            <label>Retry Count</label>
                             <frontend_type>text</frontend_type>
                             <comment>Number of Retries after Deadlock</comment>
                             <sort_order>30</sort_order>
