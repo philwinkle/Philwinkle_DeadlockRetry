@@ -246,7 +246,7 @@ class Zend_Db_Statement_Pdo extends Zend_Db_Statement implements IteratorAggrega
                     } else {
                         throw new Zend_Db_Statement_Exception($e->getMessage());
                     }
-                    sleep($this->getDelay());
+                    sleep(self::getDelay($tries));
                     $tries++;
                 }
             } while ($retry);
