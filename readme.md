@@ -1,6 +1,22 @@
 Philwinkle_DeadlockRetry
 ========================
 
+**Release Notes**
+
+v0.1.1
+
+- Bugfixes, general stability
+- Fixed an issue where serializable transaction setting wasn't being propagated
+- If module is disabled in System > Config, options are hidden in admin
+- If module is disabled registry values are not set
+- Added Apache 2.0 license file
+
+v0.1.0
+
+- Initial Release
+
+**Overview**
+
 Retries upon detected deadlock. Provides configuration panel support for enabling module and setting various options like # of retries and how long to space the retries out (using <a href="http://en.wikipedia.org/wiki/Exponential_backoff">Exponential Backoff strategy</a>).
 
 Configuration panel options are located in System > Configuration > System.
