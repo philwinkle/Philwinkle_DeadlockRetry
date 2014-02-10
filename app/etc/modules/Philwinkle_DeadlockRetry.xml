@@ -3,7 +3,7 @@
 	<modules>
 		<Philwinkle_DeadlockRetry>
             <active>true</active>
-            <codePool>local</codePool>
+            <codePool>community</codePool>
 		</Philwinkle_DeadlockRetry>
 	</modules>
 </config>

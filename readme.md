@@ -3,6 +3,12 @@ Philwinkle_DeadlockRetry
 
 **Release Notes**
 
+v0.1.2
+
+- Add composer.json
+- Changed code pool from local to community
+- Created static helper
+
 v0.1.1
 
 - Bugfixes, general stability
@@ -23,7 +29,7 @@ Configuration panel options are located in System > Configuration > System.
 
 <img src="http://i.imgur.com/J79Nef4.png"/>
 
-This module is in early alpha. Do not use with 1.8CE/1.13EE or later. 
+This module is in early alpha. Do not use with 1.8CE/1.13EE or later.
 
 
 **Disclaimer**
