@@ -39,7 +39,7 @@ class Philwinkle_DeadlockRetry_Helper_Data
     {
         $power  = (int)Mage::getStoreConfig('system/deadlock/delaypower');
         $snooze = (int)pow($power, $tries);
-        Mage::log('system/deadlock/snoozing: ' . $snooze);
+        Mage::log('system/deadlock/snoozing in sec: ' . $snooze);
         sleep($snooze);
     }
 }
