@@ -227,32 +227,8 @@ class Zend_Db_Statement_Pdo extends Zend_Db_Statement implements IteratorAggrega
      */
     public function _execute(array $params = null)
     {
-        if(Mage::registry('system/deadlock/enable')):
-
-            //begin a retry loop that will recycle should a deadlock pop up
-            $tries = 0;
-            $maxTries = Mage::registry('system/deadlock/retrycount');
-            do {
-                $retry = false;
-                try {
-                    if ($params !== null) {
-                        return $this->_stmt->execute($params);
-                    } else {
-                        return $this->_stmt->execute();
-                    }
-                } catch (Exception $e) {
-                    if ($tries < $maxTries and $e->getMessage()=='SQLSTATE[40001]: Serialization failure: 1213 Deadlock found when trying to get lock; try restarting transaction') {
-                        $retry = true;
-                    } else {
-                        throw new Zend_Db_Statement_Exception($e->getMessage());
-                    }
-                    sleep(self::getDelay($tries));
-                    $tries++;
-                }
-            } while ($retry);
-
-        else:
-
+        if(true === Philwinkle_DeadlockRetry_Helper_Data::isDisabled())
+        {
             try {
                 if ($params !== null) {
                     return $this->_stmt->execute($params);
@@ -263,20 +239,28 @@ class Zend_Db_Statement_Pdo extends Zend_Db_Statement implements IteratorAggrega
                 #require_once 'Zend/Db/Statement/Exception.php';
                 throw new Zend_Db_Statement_Exception($e->getMessage(), (int) $e->getCode(), $e);
             }
+        }
 
-        endif;
-
-    }
-
-    /**
-     * Exponential backoff strategy
-     * @see         http://en.wikipedia.org/wiki/Exponential_backoff#An_example_of_an_exponential_backoff_algorithm
-     * @param  int  $tries number of tries
-     * @return int  the number of tries raised to the second power. e.g. 5th try, 25 second delay
-     */
-    public static function getDelay($tries){
-        $power = Mage::registry('system/deadlock/delaypower');
-        return (int) pow($power, $tries);
+        //begin a retry loop that will recycle should a deadlock pop up
+        $tries = 0;
+        do {
+            $retry = false;
+            try {
+                if ($params !== null) {
+                    return $this->_stmt->execute($params);
+                } else {
+                    return $this->_stmt->execute();
+                }
+            } catch (Exception $e) {
+                if (true === Philwinkle_DeadlockRetry_Helper_Data::isRetryAllowed($e, $tries) ) {
+                    $retry = true;
+                } else {
+                    throw new Zend_Db_Statement_Exception($e->getMessage());
+                }
+                Philwinkle_DeadlockRetry_Helper_Data::pressSnoozeButton($tries);
+                $tries++;
+            }
+        } while ($retry);
     }
 
     /**

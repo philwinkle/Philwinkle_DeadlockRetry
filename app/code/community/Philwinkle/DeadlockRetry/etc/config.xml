@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Philwinkle_DeadlockRetry>
-            <version>0.1.1</version>
+            <version>0.1.2</version>
         </Philwinkle_DeadlockRetry>
     </modules>
     <global>
@@ -17,7 +17,6 @@
             </controller_front_init_before>
         </events>
     </global>
-    <frontend></frontend>
     <default>
         <system>
             <deadlock>

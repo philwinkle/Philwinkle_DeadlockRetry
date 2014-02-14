@@ -1,0 +1,10 @@
+{
+    "name": "philwinkle/deadlockretry",
+    "license": "Apache-2.0",
+    "type": "magento-module",
+    "description": "Database related: Retries upon detected deadlock.",
+    "homepage": "https://github.com/philwinkle/Philwinkle_DeadlockRetry",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
