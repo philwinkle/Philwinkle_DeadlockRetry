@@ -1,0 +1,16 @@
+{
+    "name": "philwinkle/deadlockretry",
+    "type"       : "magento-module",
+    "description": "Retries upon detected deadlock.",
+    "license": "Apache",
+    "authors": [
+        {
+            "name": "Phil Winkle",
+            "email": "fill@mein.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
