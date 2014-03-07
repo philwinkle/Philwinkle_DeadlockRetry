@@ -1,4 +1,4 @@
 # Philwinkle_DeadlockRetry
 app/code/local/Zend/Db/Statement/Pdo.php		app/code/local/Zend/Db/Statement/Pdo.php
-app/code/local/Philwinkle/						app/code/local/Philwinkle/
+app/code/community/Philwinkle/						app/code/community/Philwinkle/
 app/etc/modules/Philwinkle_DeadlockRetry.xml    app/etc/modules/Philwinkle_DeadlockRetry.xml
