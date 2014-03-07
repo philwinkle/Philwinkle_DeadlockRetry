@@ -2,7 +2,7 @@
     "name": "philwinkle/deadlockretry",
     "type"       : "magento-module",
     "description": "Retries upon detected deadlock.",
-    "license": "Apache",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Phil Winkle",
