@@ -3,6 +3,11 @@ Philwinkle_DeadlockRetry
 
 **Release Notes**
 
+v0.1.2
+
+- Composer support courtesy @TimVroom
+- Pull request to move to community courtesy @TimVroom
+
 v0.1.1
 
 - Bugfixes, general stability
