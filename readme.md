@@ -3,6 +3,10 @@ Philwinkle_DeadlockRetry
 
 **Release Notes**
 
+v0.1.2.1
+
+- Fix to pow() function argument order courtesy of @brianpittvps 
+
 v0.1.2
 
 - Composer support courtesy @TimVroom
