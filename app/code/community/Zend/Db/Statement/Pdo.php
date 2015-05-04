@@ -276,7 +276,7 @@ class Zend_Db_Statement_Pdo extends Zend_Db_Statement implements IteratorAggrega
      */
     public static function getDelay($tries){
         $power = Mage::registry('system/deadlock/delaypower');
-        return (int) pow($power, $tries);
+        return (int) pow($tries, $power);
     }
 
     /**
